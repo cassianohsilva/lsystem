@@ -29,7 +29,7 @@ public:
 			this->rules[rule->GetLeft()] = static_cast<Producible*>(rule);
 		}
 	}
-//	LSystem(const std::string& axiom, const std::vector<Producible*>& rules);
+
 	virtual ~LSystem();
 
 	const std::string& Step(std::size_t n = 1);
@@ -39,7 +39,6 @@ private:
 	std::map<std::string, Producible*> rules;
 
 	std::string current;
-}
-;
+};
 
 #endif /* LSYSTEM_H_ */

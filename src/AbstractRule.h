@@ -31,9 +31,6 @@ public:
 	AbstractRule(const std::string& left, const T& right) :
 			left(left), right(right) {
 	}
-//
-//	virtual const std::string& Get(const std::string& left)
-//			throw (InvalidLeftException) = 0;
 
 	virtual ~AbstractRule() {
 	}

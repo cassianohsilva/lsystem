@@ -11,13 +11,14 @@
 
 #include "LSystem.h"
 #include "Rule.h"
+#include "StochasticRule.h"
 
 int main(void) {
 
-	Rule r1("A", "AB");
+	StochasticRule r1("A", { { 0.25, "AB" }, { 0.25, "BA" }, { 0.25, "AA" }, { 0.25, "BB" } });
 	Rule r2("B", "A");
 
-	LSystem system(std::string("A"), std::vector<Rule*> { &r1, &r2 });
+	LSystem system(std::string("A"), std::vector<Producible*> { &r1, &r2 });
 
 	std::cout << system.Step(7) << std::endl;
 
