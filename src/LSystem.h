@@ -13,10 +13,23 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <type_traits>
 
 class LSystem {
 public:
-	LSystem(const std::string& axiom, const std::vector<Producible*>& rules);
+
+	template<class T, typename = std::enable_if<
+			std::is_base_of<Producible, T>::value>>
+	LSystem(const std::string& axiom, const std::vector<T*>& rules) :
+			axiom(axiom), current(axiom) {
+
+		for (const auto& rule : rules) {
+
+			// TODO Add check if left already added
+			this->rules[rule->GetLeft()] = static_cast<Producible*>(rule);
+		}
+	}
+//	LSystem(const std::string& axiom, const std::vector<Producible*>& rules);
 	virtual ~LSystem();
 
 	const std::string& Step(std::size_t n = 1);
@@ -26,6 +39,7 @@ private:
 	std::map<std::string, Producible*> rules;
 
 	std::string current;
-};
+}
+;
 
 #endif /* LSYSTEM_H_ */

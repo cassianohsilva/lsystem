@@ -7,17 +7,6 @@
 
 #include "LSystem.h"
 
-LSystem::LSystem(const std::string& _axiom,
-		const std::vector<Producible*>& _rules) :
-		axiom(_axiom), current(_axiom) {
-
-	for (const auto& rule : _rules) {
-
-		// TODO Add check if left already added
-		rules[rule->GetLeft()] = rule;
-	}
-}
-
 LSystem::~LSystem() {
 
 }

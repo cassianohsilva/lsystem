@@ -17,7 +17,7 @@ int main(void) {
 	Rule r1("A", "AB");
 	Rule r2("B", "A");
 
-	LSystem system(std::string("A"), std::vector<Producible*> { &r1, &r2 });
+	LSystem system(std::string("A"), std::vector<Rule*> { &r1, &r2 });
 
 	std::cout << system.Step(7) << std::endl;
 
