@@ -7,6 +7,8 @@
 
 #include "LSystem.h"
 
+#include <sstream>
+
 LSystem::~LSystem() {
 
 }
@@ -15,7 +17,7 @@ const std::string& LSystem::Step(std::size_t n) {
 
 	for (std::size_t i = 0; i < n; ++i) {
 
-		std::string temp("");
+		std::stringstream temp;
 
 		for (auto it = current.begin(); it != current.end(); ++it) {
 
@@ -23,13 +25,13 @@ const std::string& LSystem::Step(std::size_t n) {
 			auto ruleIt = rules.find(left);
 
 			if (ruleIt != rules.end()) {
-				temp += (*ruleIt).second->Produce(left);
+				temp << (*ruleIt).second->Produce(left);
 			} else {
-				temp += left;
+				temp << left;
 			}
 		}
 
-		current = temp;
+		current = temp.str();
 	}
 
 	return current;
