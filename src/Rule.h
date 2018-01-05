@@ -18,10 +18,6 @@ public:
 	virtual ~Rule();
 
 	const std::string& Produce(const std::string& left) throw (InvalidLeftException) override;
-
-private:
-	std::string symbol;
-	std::string production;
 };
 
 #endif /* RULE_H_ */
