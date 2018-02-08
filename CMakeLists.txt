@@ -11,7 +11,13 @@ file(GLOB_RECURSE SOURCE_FILES
     "src/*.c"
 )
 
-add_executable(lsystem ${SOURCE_FILES})
+add_library(lsystem SHARED ${SOURCE_FILES})
+target_include_directories(lsystem PRIVATE "./include")
+
+
+add_executable(main ${SOURCE_FILES})
+target_include_directories(main PRIVATE "./include")
+
 
 #set( CMAKE_EXPORT_COMPILE_COMMANDS 1 )
 
