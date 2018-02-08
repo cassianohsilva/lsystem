@@ -50,9 +50,6 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="lsystem.null.2125234308" name="lsystem"/>
 	</storageModule>
-	<storageModule moduleId="scannerConfiguration">
-		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 	<storageModule moduleId="refreshScope" versionNumber="2">
@@ -60,4 +57,14 @@
 			<resource resourceType="PROJECT" workspacePath="/lsystem"/>
 		</configuration>
 	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.toolchain.gnu.base.1163154694;cdt.managedbuild.toolchain.gnu.base.1163154694.1475202811;cdt.managedbuild.tool.gnu.cpp.compiler.base.1698019243;cdt.managedbuild.tool.gnu.cpp.compiler.input.388806186">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.toolchain.gnu.base.1163154694;cdt.managedbuild.toolchain.gnu.base.1163154694.1475202811;cdt.managedbuild.tool.gnu.c.compiler.base.2022751219;cdt.managedbuild.tool.gnu.c.compiler.input.1367090222">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>
